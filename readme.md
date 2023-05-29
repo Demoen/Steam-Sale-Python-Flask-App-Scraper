@@ -2,6 +2,10 @@
 
 This is a simple Flask application that scrapes the Steam store's special sales page and displays the discounted games. The website uses BeautifulSoup to parse the HTML and requests library to send HTTP requests.
 
+## Screenshot
+
+![Screenshot](screenshot.png)
+
 ## Setup and Installation
 
 1. Clone this repository to your local machine.
