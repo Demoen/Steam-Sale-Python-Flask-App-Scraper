@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Steam Sales</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #171a21;
+            color: #66c0f4;
+        }
+        .card {
+            margin: 20px;
+        }
+        .card-img-top {
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-center my-4">Steam Sales</h1>
+    <div class="container">
+        <div class="row">
+            {% for sale in sales %}
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card bg-dark text-white">
+                    <img src="{{ sale.image_url }}" class="card-img-top" alt="{{ sale.title }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ sale.title }}</h5>
+                        <p class="card-text">Discount: {{ sale.discount }}</p>
+                        <p class="card-text">Price: {{ sale.price }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
